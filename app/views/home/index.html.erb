@@ -1,0 +1,17 @@
+<div class="hero p-5 rounded-4 text-center shadow-sm">
+  <% if logged_in? %>
+    <h1 class="display-5 fw-bold">Welcome back, <%= current_user.first_name %>!</h1>
+    <p class="lead">Keep your work organized with ToDos and Categories.</p>
+    <div class="row g-3 mt-3">
+      <div class="col-md-4"><div class="stat-card"><i class="bi bi-list-check"></i><h3><%= @todos_count %></h3><p>Total ToDos</p></div></div>
+      <div class="col-md-4"><div class="stat-card"><i class="bi bi-check-circle"></i><h3><%= @completed_count %></h3><p>Completed</p></div></div>
+      <div class="col-md-4"><div class="stat-card"><i class="bi bi-folder"></i><h3><%= @categories_count %></h3><p>Categories</p></div></div>
+    </div>
+    <%= link_to "Create a New ToDo", new_todo_path, class: "btn btn-primary btn-lg mt-4" %>
+  <% else %>
+    <h1 class="display-4 fw-bold">Organize your day.</h1>
+    <p class="lead">Create categories, track priority tasks, and mark completed work.</p>
+    <%= link_to "Get Started", signup_path, class: "btn btn-warning btn-lg me-2" %>
+    <%= link_to "Login", login_path, class: "btn btn-outline-light btn-lg" %>
+  <% end %>
+</div>

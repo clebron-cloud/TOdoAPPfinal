@@ -1,0 +1,2 @@
+<div class="d-flex justify-content-between align-items-center mb-3"><h1>All ToDos</h1><%= link_to "New ToDo", new_todo_path, class: "btn btn-primary" %></div>
+<%= render partial: "todo_card", collection: @todos, as: :todo %>

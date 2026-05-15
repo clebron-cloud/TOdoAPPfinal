@@ -1,0 +1,3 @@
+<div class="card shadow-sm mb-4"><div class="card-body"><h1><%= @category.name %></h1><p><%= @category.description %></p><%= link_to "Edit", edit_category_path(@category), class: "btn btn-outline-primary" %> <%= button_to "Delete", @category, method: :delete, class: "btn btn-outline-danger d-inline-block", data: { turbo_confirm: "Delete this category and all its todos?" } %></div></div>
+<h2>ToDos in this Category</h2>
+<%= render partial: "todos/todo_card", collection: @todos, as: :todo %>

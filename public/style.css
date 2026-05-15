@@ -1,0 +1,10 @@
+body { background: #f5f7fb; }
+.hero { background: linear-gradient(135deg, #17202a, #2e86de); color: white; }
+.stat-card { background: white; color: #17202a; padding: 25px; border-radius: 18px; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+.stat-card i { font-size: 2rem; }
+.card { border: none; border-radius: 16px; }
+.todo-card { border-left: 7px solid #6c757d; }
+.priority-card { border-left-color: #dc3545; background: #fff5f5; }
+.completed-card { border-left-color: #198754; background: #f1fff7; }
+.btn { border-radius: 10px; }
+.navbar-brand { letter-spacing: .5px; }

@@ -1,0 +1,6 @@
+<h1>Login</h1>
+<%= form_with url: login_path, class: "card p-4 shadow-sm" do |f| %>
+  <div class="mb-3"><%= label_tag :username, "Username or Email", class: "form-label" %><%= text_field_tag :username, nil, class: "form-control" %></div>
+  <div class="mb-3"><%= label_tag :password, "Password", class: "form-label" %><%= password_field_tag :password, nil, class: "form-control" %></div>
+  <%= submit_tag "Login", class: "btn btn-primary" %>
+<% end %>
